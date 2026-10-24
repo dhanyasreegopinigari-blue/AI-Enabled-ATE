@@ -1,0 +1,590 @@
+/* =====================================================================
+   LIGHT THEME
+   Taken from the original project (ui/view.py -> LIGHT_STYLE) and adapted:
+
+   1. "Class#objectName" selectors were converted to Class[role="name"].
+      Reason: objectName must be UNIQUE per widget in Qt Designer, but many
+      widgets share one look. So every widget has
+          objectName -> unique, describes WHAT it is   (e.g. btnUploadImage)
+          role/kind  -> shared, describes HOW it looks (e.g. kind="primary")
+   2. The four "quick action" cards are QFrame (not QPushButton) because
+      Qt Designer cannot put labels inside a QPushButton.
+   ===================================================================== */
+
+
+QWidget { background:#FBFAF8; color:#1C291E; font-family:'Segoe UI','Inter',system-ui,sans-serif; font-size:14px; }
+QLabel { background:transparent; }
+QPushButton {
+    background: #ffffff;
+    border: 1px solid #CBD5E1;
+    border-radius: 11px;
+    padding: 8px 16px;
+    min-height: 22px;
+    color: #1C291E;
+    font-weight: 500;
+}
+QPushButton:hover {
+    background: #F4F5F4;
+    border-color: #10B981;
+}
+QPushButton:pressed {
+    background: #E8EBE8;
+}
+QPushButton:disabled {
+    color: #94A3B8;
+    background: #F1F5F9;
+    border-color: #E2E8F0;
+}
+
+QPushButton[kind="primary"] {
+    background: #10B981;
+    border: 1px solid #10B981;
+    border-radius: 11px;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 8px 18px;
+}
+QPushButton[kind="primary"]:hover {
+    background: #059669;
+    border-color: #059669;
+}
+QPushButton[kind="primary"]:pressed {
+    background: #047857;
+}
+QPushButton[kind="primary"]:disabled {
+    background: #E2E8F0;
+    color: #94A3B8;
+}
+
+QPushButton[kind="secondary"] {
+    background: #ffffff;
+    border: 1px solid #CBD5E1;
+    border-radius: 11px;
+    color: #1C291E;
+    font-weight: 500;
+}
+QPushButton[kind="secondary"]:hover {
+    background: #F4F5F4;
+    color: #000000;
+    border-color: #10B981;
+}
+
+QPushButton[kind="danger"] {
+    background: #FEF2F2;
+    border: 1px solid #FCA5A5;
+    border-radius: 11px;
+    color: #B91C1C;
+}
+QPushButton[kind="danger"]:hover {
+    background: #FECACA;
+    border-color: #F87171;
+    color: #991B1B;
+}
+
+QPushButton[kind="nav"] {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 7px 14px;
+    color: #5E7060;
+    font-weight: 600;
+    font-size: 13.5px;
+}
+QPushButton[kind="nav"]:hover {
+    background: #F1F5F9;
+    color: #1C291E;
+    border-color: #E2E8F0;
+}
+QPushButton[kind="navActive"] {
+    background: #E8F5E9;
+    border: 1px solid #A7F3D0;
+    border-radius: 10px;
+    padding: 7px 14px;
+    color: #047857;
+    font-weight: 700;
+    font-size: 13.5px;
+}
+
+QPushButton[kind="chip"] {
+    background: #ffffff;
+    border: 1px solid #CBD5E1;
+    border-radius: 16px;
+    padding: 6px 14px;
+    color: #5E7060;
+    font-size: 12.5px;
+    font-weight: 500;
+}
+QPushButton[kind="chip"]:hover {
+    background: #F1F5F9;
+    color: #1C291E;
+    border-color: #10B981;
+}
+QPushButton[kind="chipActive"] {
+    background: #E8F5E9;
+    border: 1px solid #10B981;
+    border-radius: 16px;
+    padding: 6px 14px;
+    color: #047857;
+    font-size: 12.5px;
+    font-weight: 600;
+}
+
+QPushButton[kind="cardAction"] {
+    text-align: left;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid #E8E6E1;
+    padding: 16px;
+}
+QPushButton[kind="cardAction"]:hover {
+    border-color: #10B981;
+    background: #FBFAF8;
+}
+
+QLineEdit, QComboBox, QSpinBox {
+    background: #ffffff;
+    border: 1px solid #CBD5E1;
+    border-radius: 11px;
+    padding: 9px 12px;
+    color: #1C291E;
+    selection-background-color: #E8F5E9;
+}
+QLineEdit:focus, QComboBox:focus, QSpinBox:focus {
+    border: 1px solid #10B981;
+    background: #ffffff;
+}
+QComboBox QAbstractItemView {
+    background: #ffffff;
+    border: 1px solid #CBD5E1;
+    selection-background-color: #E8F5E9;
+    selection-color: #047857;
+}
+
+QListWidget {
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 6px;
+    outline: 0;
+}
+QListWidget::item {
+    padding: 10px 12px;
+    border-radius: 9px;
+    margin-bottom: 4px;
+}
+QListWidget::item:hover {
+    background: #F1F5F9;
+}
+QListWidget::item:selected {
+    background: #E8F5E9;
+    color: #047857;
+}
+
+QFrame[role="card"] {
+    background: #ffffff;
+    border: 1px solid #E8E6E1;
+    border-radius: 18px;
+}
+QFrame[role="accentCard"] {
+    background: #F4F9F5;
+    border: 1px solid #A7F3D0;
+    border-radius: 18px;
+}
+QFrame[role="tipCard"] {
+    background: #ffffff;
+    border: 1px solid #E8E6E1;
+    border-radius: 16px;
+    padding: 12px;
+}
+QFrame[role="tipCard"]:hover {
+    border-color: #10B981;
+    background: #FBFAF8;
+}
+QFrame[role="sidebarFrame"] {
+    background: #F4F6F4;
+    border-right: 1px solid #E2E8F0;
+}
+
+QFrame[role="userBubble"] {
+    background: #DCFCE7;
+    border: 1px solid #86EFAC;
+    border-radius: 16px;
+}
+QFrame[role="asstCard"] {
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 18px;
+}
+
+/* Chat Sidebar Items */
+QFrame[role="chatItem"] {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    padding: 2px 4px;
+}
+QFrame[role="chatItem"]:hover {
+    background: #F1F5F9;
+    border-color: #E2E8F0;
+}
+QFrame[role="chatItem"][active="true"] {
+    background: #E8F5E9;
+    border: 1px solid #A7F3D0;
+}
+QLabel[role="chatItemTitle"] {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1C291E;
+}
+QFrame[role="chatItem"][active="true"] QLabel[role="chatItemTitle"] {
+    color: #047857;
+}
+
+/* Component Library Cards & Pills */
+QFrame[role="compCard"] {
+    background: #ffffff;
+    border: 1px solid #E8E6E1;
+    border-radius: 18px;
+}
+QFrame[role="compCard"]:hover {
+    background: #FBFAF8;
+    border: 1px solid #10B981;
+}
+QFrame[role="imgPanel"] {
+    background: #F4F3EE;
+    border: 1px solid #E8E6E1;
+    border-radius: 14px;
+}
+QPushButton[kind="catPill"] {
+    background: #ffffff;
+    border: 1px solid #CBD5E1;
+    border-radius: 15px;
+    padding: 6px 14px;
+    color: #5E7060;
+    font-size: 13px;
+    font-weight: 500;
+}
+QPushButton[kind="catPill"]:hover {
+    background: #F1F5F9;
+    color: #1C291E;
+    border-color: #94A3B8;
+}
+QPushButton[kind="catPillActive"] {
+    background: #10B981;
+    border: 1px solid #10B981;
+    border-radius: 15px;
+    padding: 6px 14px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+QFrame[role="typingCard"] {
+    background: #FBFAF8;
+    border: 1px dashed #CBD5E1;
+    border-radius: 14px;
+}
+
+QLabel[role="brand"] { font-size:18px; font-weight:800; color:#1C291E; letter-spacing:0.5px; }
+QLabel[role="title"] { font-size:26px; font-weight:800; color:#1C291E; letter-spacing:0.5px; }
+QLabel[role="h1"] { font-size:20px; font-weight:700; color:#1C291E; }
+QLabel[role="h2"] { font-size:16px; font-weight:600; color:#2D3F30; }
+QLabel[role="subtitle"] { font-size:14px; color:#5E7060; }
+QLabel[role="muted"] { color:#5E7060; font-size:13px; }
+QLabel[role="caption"] { color:#7A8C7C; font-size:12px; }
+QLabel[role="badge"] {
+    background: #ECFDF5;
+    border: 1px solid #A7F3D0;
+    border-radius: 8px;
+    padding: 3px 8px;
+    color: #047857;
+    font-size: 11.5px;
+    font-weight: 600;
+}
+QLabel[role="badgeOk"] {
+    background: #ECFDF5;
+    border: 1px solid #A7F3D0;
+    border-radius: 8px;
+    padding: 3px 8px;
+    color: #047857;
+    font-size: 11.5px;
+    font-weight: 600;
+}
+QLabel[role="badgeWarn"] {
+    background: #FFFBEB;
+    border: 1px solid #FDE68A;
+    border-radius: 8px;
+    padding: 3px 8px;
+    color: #B45309;
+    font-size: 11.5px;
+    font-weight: 600;
+}
+QLabel[role="codeBlock"] {
+    background: #F1F5F9;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-family: 'Cascadia Code','Consolas','Courier New',monospace;
+    font-size: 12.5px;
+    color: #047857;
+}
+
+QScrollBar:vertical { background:#FBFAF8; width:10px; margin:0; }
+QScrollBar::handle:vertical { background:#CBD5E1; min-height:24px; border-radius:5px; margin:2px; }
+QScrollBar::handle:vertical:hover { background:#10B981; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height:0; }
+QScrollBar:horizontal { background:#FBFAF8; height:10px; margin:0; }
+QScrollBar::handle:horizontal { background:#CBD5E1; min-width:24px; border-radius:5px; margin:2px; }
+QScrollBar::handle:horizontal:hover { background:#10B981; }
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal { width:0; }
+
+QProgressBar { background:#F1F5F9; border:1px solid #CBD5E1; border-radius:6px; text-align:center; }
+QProgressBar::chunk { background:#10B981; border-radius:5px; }
+QTreeWidget { background:#ffffff; border:1px solid #E2E8F0; border-radius:12px; outline:0; color:#1C291E; }
+QTreeWidget::item { padding:6px; border-radius:6px; }
+QTreeWidget::item:hover { background:#F1F5F9; }
+QTreeWidget::item:selected { background:#E8F5E9; color:#047857; }
+QTabWidget::pane { border:1px solid #E2E8F0; border-radius:14px; background:#ffffff; }
+QTabBar::tab {
+    background: #FBFAF8;
+    border: 1px solid #E2E8F0;
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 8px 18px;
+    margin-right: 4px;
+    color: #5E7060;
+    font-weight: 600;
+}
+QTabBar::tab:selected { background:#E8F5E9; color:#047857; border-color:#10B981; }
+QTabBar::tab:hover:!selected { background:#F1F5F9; color:#1C291E; }
+
+/* Quick Action Cards */
+QFrame[kind="qaCardPrimary"] {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #E8F5E9, stop:1 #D1FAE5);
+    border: 1.5px solid #10B981;
+    border-radius: 18px;
+    padding: 0px;
+    text-align: left;
+}
+QFrame[kind="qaCardPrimary"]:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #D1FAE5, stop:1 #A7F3D0);
+    border-color: #059669;
+}
+QFrame[kind="qaCardTeal"] {
+    background: #F0FDFA;
+    border: 1px solid #99F6E4;
+    border-radius: 18px;
+    padding: 0px;
+    text-align: left;
+}
+QFrame[kind="qaCardTeal"]:hover {
+    background: #CCFBF1;
+    border-color: #0D9488;
+}
+QFrame[kind="qaCardMint"] {
+    background: #F0FDF4;
+    border: 1px solid #A7F3D0;
+    border-radius: 18px;
+    padding: 0px;
+    text-align: left;
+}
+QFrame[kind="qaCardMint"]:hover {
+    background: #DCFCE7;
+    border-color: #059669;
+}
+QFrame[kind="qaCardLime"] {
+    background: #F7FEE7;
+    border: 1px solid #D9F99D;
+    border-radius: 18px;
+    padding: 0px;
+    text-align: left;
+}
+QFrame[kind="qaCardLime"]:hover {
+    background: #ECFCCB;
+    border-color: #65A30D;
+}
+QLabel[role="qaTitle"] { font-size: 15px; font-weight: 700; color: #1C291E; }
+QLabel[role="qaDesc"] { font-size: 12px; color: #5E7060; }
+QFrame[kind="qaCardPrimary"] QLabel[role="qaTitle"] { color: #047857; }
+
+/* Sub-cards and Stat boxes */
+QFrame[role="subCard"] {
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+}
+QFrame[role="subCard"]:hover {
+    background: #FBFAF8;
+    border-color: #CBD5E1;
+}
+QLabel[role="subCardTitle"] { font-weight: 600; font-size: 13px; color: #1C291E; }
+QFrame[role="statBoxGreen"] {
+    background: #ECFDF5;
+    border: 1px solid #A7F3D0;
+    border-radius: 12px;
+}
+QFrame[role="statBoxTeal"] {
+    background: #F0FDFA;
+    border: 1px solid #99F6E4;
+    border-radius: 12px;
+}
+QLabel[role="statGreenVal"] { font-size: 20px; font-weight: 700; color: #047857; }
+QLabel[role="statTealVal"] { font-size: 20px; font-weight: 700; color: #0D9488; }
+
+/* Global Left Sidebar */
+QFrame[role="globalSidebar"] {
+    background: #F4F3EE;
+    border-right: 1px solid #E2E0D8;
+}
+QPushButton[role="collapseBtn"] {
+    background: transparent;
+    border: 1px solid #D5D3CC;
+    border-radius: 8px;
+    padding: 4px;
+}
+QPushButton[role="collapseBtn"]:hover {
+    background: #E8E6DF;
+    border-color: #10B981;
+}
+QPushButton[kind="sidebarNav"] {
+    text-align: left;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 9px 12px;
+    color: #475549;
+    font-weight: 500;
+    font-size: 13.5px;
+}
+QPushButton[kind="sidebarNav"]:hover {
+    background: #EBEAE3;
+    color: #131f16;
+    border-color: #D5D3CC;
+}
+QPushButton[kind="sidebarNavActive"] {
+    text-align: left;
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-left: 3.5px solid #10B981;
+    border-radius: 10px;
+    padding: 9px 12px;
+    color: #059669;
+    font-weight: 700;
+    font-size: 13.5px;
+}
+QPushButton[kind="sidebarNavCollapsed"] {
+    text-align: center;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 9px 0px;
+}
+QPushButton[kind="sidebarNavCollapsed"]:hover {
+    background: #EBEAE3;
+    border-color: #D5D3CC;
+}
+QPushButton[kind="sidebarNavCollapsedActive"] {
+    text-align: center;
+    background: rgba(16, 185, 129, 0.14);
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    border-radius: 10px;
+    padding: 9px 0px;
+}
+
+/* Slim Content Header */
+QFrame[role="slimHeader"] {
+    background: #FBFAF8;
+    border-bottom: 1px solid #EAE8E2;
+}
+
+/* User Manual Documentation & TOC */
+QFrame[role="tocCard"] {
+    background: #FFFFFF;
+    border: 1px solid #E8E6E1;
+    border-radius: 16px;
+    padding: 10px;
+}
+QPushButton[kind="tocItem"] {
+    text-align: left;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 7px 10px;
+    color: #475549;
+    font-size: 13px;
+    font-weight: 500;
+}
+QPushButton[kind="tocItem"]:hover {
+    background: #F4F3EE;
+    color: #0F172A;
+    border-color: #E2E0D8;
+}
+QPushButton[kind="tocItemActive"] {
+    text-align: left;
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.28);
+    border-left: 3px solid #10B981;
+    border-radius: 8px;
+    padding: 7px 10px;
+    color: #059669;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/* Callout Boxes */
+QFrame[role="calloutTip"] {
+    background: #F0FDF4;
+    border-left: 4px solid #10B981;
+    border-top: 1px solid #D1FAE5;
+    border-right: 1px solid #D1FAE5;
+    border-bottom: 1px solid #D1FAE5;
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+QFrame[role="calloutNote"] {
+    background: #F0F9FF;
+    border-left: 4px solid #0284C7;
+    border-top: 1px solid #E0F2FE;
+    border-right: 1px solid #E0F2FE;
+    border-bottom: 1px solid #E0F2FE;
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+QFrame[role="calloutWarning"] {
+    background: #FFFBEB;
+    border-left: 4px solid #D97706;
+    border-top: 1px solid #FEF3C7;
+    border-right: 1px solid #FEF3C7;
+    border-bottom: 1px solid #FEF3C7;
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+QFrame[role="calloutCaution"] {
+    background: #FEF2F2;
+    border-left: 4px solid #DC2626;
+    border-top: 1px solid #FEE2E2;
+    border-right: 1px solid #FEE2E2;
+    border-bottom: 1px solid #FEE2E2;
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+
+/* Code Snippet Box */
+QFrame[role="codeSnippet"] {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 11px;
+    padding: 12px 14px;
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+
+
+
+/* ---- Extra rules added for the Designer version (not in the original) ---- */
+/* Suggested-question card on the AI Assistant page (was a QPushButton "secondary" with a label inside) */
+QFrame[role="questionCard"] {
+    background: #ffffff; border: 1px solid #d7e6dc; border-radius: 11px;
+}
+QFrame[role="questionCard"]:hover { background: #f0faf4; border-color: #10B981; }

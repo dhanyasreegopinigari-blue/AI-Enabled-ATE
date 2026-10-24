@@ -1,0 +1,5 @@
+[project]
+name = "ai-enabled-ate-project-2"
+version = "0.1.0"
+requires-python = ">=3.15"
+dependencies = []

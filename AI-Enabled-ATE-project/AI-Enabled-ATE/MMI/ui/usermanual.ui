@@ -1,0 +1,3612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserManual</class>
+ <widget class="QWidget" name="UserManual">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="userManualRootLayout" stretch="0,1">
+   <property name="spacing">
+    <number>14</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="docSearchCard">
+     <property name="role" stdset="0">
+      <string notr="true">card</string>
+     </property>
+     <layout class="QHBoxLayout" name="docSearchLayout" stretch="0,1">
+      <property name="spacing">
+       <number>12</number>
+      </property>
+      <property name="leftMargin">
+       <number>16</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>16</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="docSearchIcon">
+        <property name="pixmap">
+         <pixmap>icons/search__00FF85__18.svg</pixmap>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>18</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>18</width>
+          <height>18</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="docSearchInput">
+        <property name="placeholderText">
+         <string>Search documentation, pins, commands, safety rules, or troubleshooting...</string>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string>background: transparent; border: none; font-size: 14px; padding: 4px;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="docSplitRow" stretch="0,1">
+     <property name="spacing">
+      <number>20</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="tocCard">
+       <property name="role" stdset="0">
+        <string notr="true">tocCard</string>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>250</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>250</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <layout class="QVBoxLayout" name="tocLayout">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <property name="leftMargin">
+         <number>12</number>
+        </property>
+        <property name="topMargin">
+         <number>14</number>
+        </property>
+        <property name="rightMargin">
+         <number>12</number>
+        </property>
+        <property name="bottomMargin">
+         <number>14</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="tocHeaderRow">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="tocIcon">
+            <property name="pixmap">
+             <pixmap>icons/compass__00FF85__16.svg</pixmap>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="tocTitle">
+            <property name="text">
+             <string>ON THIS PAGE</string>
+            </property>
+            <property name="styleSheet">
+             <string>font-size: 11.5px; font-weight: 800; color: #8ca394;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="tocHeaderSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnToc1">
+          <property name="text">
+           <string>1. Getting Started</string>
+          </property>
+          <property name="kind" stdset="0">
+           <string notr="true">tocItemActive</string>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="icon">
+           <iconset>icons/play__00FF85.svg<normaloff>icons/play__00FF85.svg</normaloff>
+           </iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>15</width>
+            <height>15</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnToc2">
+          <property name="text">
+           <string>2. Dashboard &amp;&amp; Vision</string>
+          </property>
+          <property name="kind" stdset="0">
+           <string notr="true">tocItem</string>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="icon">
+           <iconset>icons/layout-grid__8ca394.svg<normaloff>icons/layout-grid__8ca394.svg</normaloff>
+           </iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>15</width>
+            <height>15</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnToc3">
+          <property name="text">
+           <string>3. AI Assistant &amp;&amp; RAG</string>
+          </property>
+          <property name="kind" stdset="0">
+           <string notr="true">tocItem</string>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="icon">
+           <iconset>icons/message-square__8ca394.svg<normaloff>icons/message-square__8ca394.svg</normaloff>
+           </iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>15</width>
+            <height>15</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnToc4">
+          <property name="text">
+           <string>4. Component Library</string>
+          </property>
+          <property name="kind" stdset="0">
+           <string notr="true">tocItem</string>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="icon">
+           <iconset>icons/cpu__8ca394.svg<normaloff>icons/cpu__8ca394.svg</normaloff>
+           </iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>15</width>
+            <height>15</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnToc5">
+          <property name="text">
+           <string>5. Hardware Manuals</string>
+          </property>
+          <property name="kind" stdset="0">
+           <string notr="true">tocItem</string>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="icon">
+           <iconset>icons/book-open__8ca394.svg<normaloff>icons/book-open__8ca394.svg</normaloff>
+           </iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>15</width>
+            <height>15</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnToc6">
+          <property name="text">
+           <string>6. Voice &amp;&amp; Live Camera</string>
+          </property>
+          <property name="kind" stdset="0">
+           <string notr="true">tocItem</string>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="icon">
+           <iconset>icons/mic__8ca394.svg<normaloff>icons/mic__8ca394.svg</normaloff>
+           </iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>15</width>
+            <height>15</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnToc7">
+          <property name="text">
+           <string>7. Exporting Reports</string>
+          </property>
+          <property name="kind" stdset="0">
+           <string notr="true">tocItem</string>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="icon">
+           <iconset>icons/download__8ca394.svg<normaloff>icons/download__8ca394.svg</normaloff>
+           </iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>15</width>
+            <height>15</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnToc8">
+          <property name="text">
+           <string>8. Safety &amp;&amp; Bench Rules</string>
+          </property>
+          <property name="kind" stdset="0">
+           <string notr="true">tocItem</string>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="icon">
+           <iconset>icons/shield-alert__8ca394.svg<normaloff>icons/shield-alert__8ca394.svg</normaloff>
+           </iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>15</width>
+            <height>15</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnToc9">
+          <property name="text">
+           <string>9. Troubleshooting &amp;&amp; FAQ</string>
+          </property>
+          <property name="kind" stdset="0">
+           <string notr="true">tocItem</string>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="icon">
+           <iconset>icons/help-circle__8ca394.svg<normaloff>icons/help-circle__8ca394.svg</normaloff>
+           </iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>15</width>
+            <height>15</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="tocSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QScrollArea" name="docScroll">
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string>QScrollArea { background: transparent; border: none; }</string>
+       </property>
+       <widget class="QWidget" name="docScrollContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>860</width>
+          <height>4200</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="docScrollLayout" stretch="1,12,1">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>20</number>
+         </property>
+         <property name="bottomMargin">
+          <number>40</number>
+         </property>
+         <item>
+          <spacer name="docSpacerL">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QWidget" name="docColumn">
+           <property name="maximumSize">
+            <size>
+             <width>960</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <layout class="QVBoxLayout" name="docColumnLayout">
+            <property name="spacing">
+             <number>32</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QWidget" name="secGettingStarted">
+              <layout class="QVBoxLayout" name="secGettingStartedLayout">
+               <property name="spacing">
+                <number>14</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="secGettingStartedTitle">
+                 <property name="text">
+                  <string>1. Getting Started with ElectroLearn AI</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 20px; font-weight: 800;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="secGettingStartedSubtitle">
+                 <property name="text">
+                  <string>An offline-first intelligent hardware engineering companion combining computer vision, local LLM RAG, and voice recognition.</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 13.5px; color: #8ca394;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s1Step1">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s1Step1Layout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s1Step1Badge">
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string>background: rgba(0, 255, 133, 0.15); border: 1.5px solid #00FF85; border-radius: 14px; font-size: 13px; font-weight: 800; color: #00FF85;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s1Step1TextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s1Step1Title">
+                      <property name="text">
+                       <string>Capture or Upload PCB Components</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 14.5px; font-weight: 700;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s1Step1Text">
+                      <property name="text">
+                       <string>Choose 'Upload Image' to drag &amp; drop photos from your microscope, or click 'Live Camera' to align components under your webcam or USB bench microscope in real time.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s1Step2">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s1Step2Layout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s1Step2Badge">
+                    <property name="text">
+                     <string>2</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string>background: rgba(0, 255, 133, 0.15); border: 1.5px solid #00FF85; border-radius: 14px; font-size: 13px; font-weight: 800; color: #00FF85;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s1Step2TextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s1Step2Title">
+                      <property name="text">
+                       <string>Automated OCR &amp; Marking Detection</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 14.5px; font-weight: 700;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s1Step2Text">
+                      <property name="text">
+                       <string>The neural vision engine extracts laser markings, pin counts, package types (DIP, TO-92, SOIC), and automatically correlates them with manufacturer datasheets.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s1Step3">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s1Step3Layout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s1Step3Badge">
+                    <property name="text">
+                     <string>3</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string>background: rgba(0, 255, 133, 0.15); border: 1.5px solid #00FF85; border-radius: 14px; font-size: 13px; font-weight: 800; color: #00FF85;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s1Step3TextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s1Step3Title">
+                      <property name="text">
+                       <string>Ask Questions &amp; Jump to Cited Manuals</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 14.5px; font-weight: 700;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s1Step3Text">
+                      <property name="text">
+                       <string>Query the AI assistant with voice or text. Click citations like [Manual, p.12] to inspect original schematics and pin connection tables directly in the PDF reader.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s1Note">
+                 <property name="role" stdset="0">
+                  <string notr="true">calloutNote</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s1NoteLayout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s1NoteIcon">
+                    <property name="pixmap">
+                     <pixmap>icons/info__38bdf8__20.svg</pixmap>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s1NoteTextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s1NoteTitle">
+                      <property name="text">
+                       <string>100% Local Privacy &amp; Air-Gapped Operation</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13.5px; font-weight: 700; color: #38bdf8;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s1NoteText">
+                      <property name="text">
+                       <string>All OCR extraction (Tesseract), vision search, speech transcription (OpenAI Whisper), and RAG neural reasoning (Ollama) run entirely on your computer. No schematics, component photos, or lab notes leave your bench.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s1Code">
+                 <property name="role" stdset="0">
+                  <string notr="true">codeSnippet</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="s1CodeLayout">
+                  <property name="spacing">
+                   <number>6</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>10</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>12</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="s1CodeHint">
+                    <property name="text">
+                     <string>SHELL SETUP</string>
+                    </property>
+                    <property name="styleSheet">
+                     <string>font-size: 11px; font-weight: 700; color: #8ca394;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="s1CodeCode">
+                    <property name="text">
+                     <string># Ensure your local Ollama service is running:
+ollama serve
+
+# Recommended local model (fast &amp; accurate):
+ollama run qwen2.5:3b</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string>font-family: 'Consolas', 'Courier New', monospace; font-size: 12.5px; color: #67e8f9;</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="secDashboard">
+              <layout class="QVBoxLayout" name="secDashboardLayout">
+               <property name="spacing">
+                <number>14</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="secDashboardTitle">
+                 <property name="text">
+                  <string>2. Dashboard &amp; Visual Component Identification</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 20px; font-weight: 800;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="secDashboardSubtitle">
+                 <property name="text">
+                  <string>Scanning unknown parts, inspecting package markings, and triggering high-resolution zoomable lightboxes.</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 13.5px; color: #8ca394;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s2LightboxCard">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s2LightboxLayout" stretch="0,1">
+                  <property name="spacing">
+                   <number>16</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item>
+                   <widget class="QFrame" name="s2DemoImagePanel">
+                    <property name="role" stdset="0">
+                     <string notr="true">imgPanel</string>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>140</width>
+                      <height>100</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>140</width>
+                      <height>100</height>
+                     </size>
+                    </property>
+                    <layout class="QVBoxLayout" name="s2DemoImageLayout">
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="s2DemoImage">
+                       <property name="pixmap">
+                        <pixmap>icons/image__00FF85__36.svg</pixmap>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>36</width>
+                         <height>36</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>36</width>
+                         <height>36</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s2LightboxText">
+                    <property name="spacing">
+                     <number>6</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s2LightboxTitle">
+                      <property name="text">
+                       <string>Interactive Zoomable Lightbox</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 14.5px; font-weight: 700;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s2LightboxDesc">
+                      <property name="text">
+                       <string>Every captured photo and matched manual figure supports full-screen inspection: zoom in/out with buttons or mouse wheel, drag to pan across high-density circuit traces, and reset to 1:1 view.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 12.5px; color: #8ca394;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="s2LightboxButtonRow">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="btnOpenLightbox">
+                        <property name="text">
+                         <string>Open Lightbox Viewer</string>
+                        </property>
+                        <property name="kind" stdset="0">
+                         <string notr="true">secondary</string>
+                        </property>
+                        <property name="cursor">
+                         <cursorShape>PointingHandCursor</cursorShape>
+                        </property>
+                        <property name="icon">
+                         <iconset>icons/maximize__00FF85.svg<normaloff>icons/maximize__00FF85.svg</normaloff>
+                         </iconset>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>14</width>
+                          <height>14</height>
+                         </size>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="s2BtnSpacer">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s2Tip">
+                 <property name="role" stdset="0">
+                  <string notr="true">calloutTip</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s2TipLayout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s2TipIcon">
+                    <property name="pixmap">
+                     <pixmap>icons/zap__00FF85__20.svg</pixmap>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s2TipTextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s2TipTitle">
+                      <property name="text">
+                       <string>Bench Lighting &amp; Package Glare Tip</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13.5px; font-weight: 700; color: #00FF85;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s2TipText">
+                      <property name="text">
+                       <string>When capturing small SOIC or QFN packages, angled side lighting reduces specular reflection from glossy black epoxy, making faint laser-etched part numbers significantly crisper for OCR.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="secAssistant">
+              <layout class="QVBoxLayout" name="secAssistantLayout">
+               <property name="spacing">
+                <number>14</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="secAssistantTitle">
+                 <property name="text">
+                  <string>3. AI Assistant &amp; RAG Querying</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 20px; font-weight: 800;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="secAssistantSubtitle">
+                 <property name="text">
+                  <string>Context-aware circuit design assistance, calculation derivations, and automated datasheet citation linking.</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 13.5px; color: #8ca394;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s3Step1">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s3Step1Layout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s3Step1Badge">
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string>background: rgba(0, 255, 133, 0.15); border: 1.5px solid #00FF85; border-radius: 14px; font-size: 13px; font-weight: 800; color: #00FF85;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s3Step1TextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s3Step1Title">
+                      <property name="text">
+                       <string>Multi-Turn Continuous Conversation Memory</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 14.5px; font-weight: 700;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s3Step1Text">
+                      <property name="text">
+                       <string>Follow-up queries remember previous calculations and component parameters. Ask 'What capacitor value should I use?' followed by 'What if the frequency is 10kHz?' seamlessly.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s3Step2">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s3Step2Layout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s3Step2Badge">
+                    <property name="text">
+                     <string>2</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string>background: rgba(0, 255, 133, 0.15); border: 1.5px solid #00FF85; border-radius: 14px; font-size: 13px; font-weight: 800; color: #00FF85;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s3Step2TextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s3Step2Title">
+                      <property name="text">
+                       <string>Clickable Manual Citations [Manual, p.12]</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 14.5px; font-weight: 700;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s3Step2Text">
+                      <property name="text">
+                       <string>Whenever the assistant draws facts from uploaded manuals, it generates interactive citation chips. Clicking any citation opens the Hardware Manual viewer straight to the referenced page.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s3Step3">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s3Step3Layout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s3Step3Badge">
+                    <property name="text">
+                     <string>3</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string>background: rgba(0, 255, 133, 0.15); border: 1.5px solid #00FF85; border-radius: 14px; font-size: 13px; font-weight: 800; color: #00FF85;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s3Step3TextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s3Step3Title">
+                      <property name="text">
+                       <string>Deep-Dive Mode for Comprehensive Analysis</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 14.5px; font-weight: 700;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s3Step3Text">
+                      <property name="text">
+                       <string>Enable 'Deep-dive Mode' in the chat header when you require step-by-step mathematical proofs, formula derivations, thermal dissipation models, or alternative replacement part tables.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s3Tip">
+                 <property name="role" stdset="0">
+                  <string notr="true">calloutTip</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s3TipLayout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s3TipIcon">
+                    <property name="pixmap">
+                     <pixmap>icons/zap__00FF85__20.svg</pixmap>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s3TipTextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s3TipTitle">
+                      <property name="text">
+                       <string>Chat History Management</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13.5px; font-weight: 700; color: #00FF85;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s3TipText">
+                      <property name="text">
+                       <string>Your diagnostic conversations are organized in the AI Assistant sidebar by timeline (Today, Yesterday, 7 Days, Older). You can search chat topics, export answers, or start a new thread anytime.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="secLibrary">
+              <layout class="QVBoxLayout" name="secLibraryLayout">
+               <property name="spacing">
+                <number>14</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="secLibraryTitle">
+                 <property name="text">
+                  <string>4. Curated Component Library &amp; Visual Gallery</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 20px; font-weight: 800;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="secLibrarySubtitle">
+                 <property name="text">
+                  <string>Explore electronic components across 8 categories with actual photography, labeled pinouts, and standard schematic symbols.</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 13.5px; color: #8ca394;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s4ViewCard">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="s4ViewCardLayout">
+                  <property name="spacing">
+                   <number>10</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>18</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>18</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>16</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="s4ViewCardTitle">
+                    <property name="text">
+                     <string>3-View Visual Inspection System</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string>font-size: 15px; font-weight: 700; color: #00FF85;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="s4ViewCardText">
+                    <property name="text">
+                     <string>Under every component's detail dialog, you have immediate access to:
+• Actual Component: High-resolution photographs showing physical form factor and package markings.
+• Pinout Diagram: Clear, color-coded pinout maps with numbering, signal names (VCC, GND, OUT), and notch orientation.
+• Schematic Symbol: Standard IEEE/IEC circuit diagram symbols illustrating internal logic and terminal connections.</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string>font-size: 13px;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="s4ViewCardButtonRow">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="btnOpenComponentLibrary">
+                      <property name="text">
+                       <string>Open Component Library</string>
+                      </property>
+                      <property name="kind" stdset="0">
+                       <string notr="true">primary</string>
+                      </property>
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
+                      <property name="icon">
+                       <iconset>icons/cpu__060907.svg<normaloff>icons/cpu__060907.svg</normaloff>
+                       </iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>14</width>
+                        <height>14</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="s4ViewCardButtonSpacer">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="secManuals">
+              <layout class="QVBoxLayout" name="secManualsLayout">
+               <property name="spacing">
+                <number>14</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="secManualsTitle">
+                 <property name="text">
+                  <string>5. Hardware Manuals &amp; Interactive PDF Reader</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 20px; font-weight: 800;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="secManualsSubtitle">
+                 <property name="text">
+                  <string>Batch index PDF service manuals, datasheets, and schematics with full-text search and visual FAISS embeddings.</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 13.5px; color: #8ca394;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s5Step1">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s5Step1Layout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s5Step1Badge">
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string>background: rgba(0, 255, 133, 0.15); border: 1.5px solid #00FF85; border-radius: 14px; font-size: 13px; font-weight: 800; color: #00FF85;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s5Step1TextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s5Step1Title">
+                      <property name="text">
+                       <string>Multi-PDF Batch Upload &amp; OCR Indexing</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 14.5px; font-weight: 700;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s5Step1Text">
+                      <property name="text">
+                       <string>Drag &amp; drop multiple PDF files into the upload zone. The system automatically extracts text layers, applies Tesseract OCR to scanned pages, generates page snapshots, and builds vector indexes.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s5Step2">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s5Step2Layout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s5Step2Badge">
+                    <property name="text">
+                     <string>2</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string>background: rgba(0, 255, 133, 0.15); border: 1.5px solid #00FF85; border-radius: 14px; font-size: 13px; font-weight: 800; color: #00FF85;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s5Step2TextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s5Step2Title">
+                      <property name="text">
+                       <string>'Include in AI Search' Toggle Control</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 14.5px; font-weight: 700;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s5Step2Text">
+                      <property name="text">
+                       <string>Every indexed manual features a toggle switch. Enable or disable individual manuals from the AI knowledge retrieval pool to focus answers on the specific machine you are repairing.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s5Step3">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s5Step3Layout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s5Step3Badge">
+                    <property name="text">
+                     <string>3</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string>background: rgba(0, 255, 133, 0.15); border: 1.5px solid #00FF85; border-radius: 14px; font-size: 13px; font-weight: 800; color: #00FF85;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s5Step3TextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s5Step3Title">
+                      <property name="text">
+                       <string>Interactive Bench PDF Reader</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 14.5px; font-weight: 700;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s5Step3Text">
+                      <property name="text">
+                       <string>Includes thumbnail strip navigation, dark reading mode (inverted contrast for low-light benches), full-text search with term highlighting, and bookmarked pages.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s5HubCard">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s5HubLayout" stretch="0,1,0">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>18</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>18</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="s5HubIcon">
+                    <property name="pixmap">
+                     <pixmap>icons/book-open__00FF85__26.svg</pixmap>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>26</width>
+                      <height>26</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>26</width>
+                      <height>26</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s5HubText">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s5HubTitle">
+                      <property name="text">
+                       <string>Ready to upload or inspect hardware datasheets?</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 14.5px; font-weight: 700;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s5HubDesc">
+                      <property name="text">
+                       <string>Switch to the Hardware PDF Manuals Hub to manage your PDF library, re-index documents, or browse the interactive PDF reader.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 12.5px; color: #8ca394;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="btnOpenHardwareHub">
+                    <property name="text">
+                     <string>Open Hardware PDF Hub</string>
+                    </property>
+                    <property name="kind" stdset="0">
+                     <string notr="true">primary</string>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="icon">
+                     <iconset>icons/external-link__060907.svg<normaloff>icons/external-link__060907.svg</normaloff>
+                     </iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>14</width>
+                      <height>14</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="secVoice">
+              <layout class="QVBoxLayout" name="secVoiceLayout">
+               <property name="spacing">
+                <number>14</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="secVoiceTitle">
+                 <property name="text">
+                  <string>6. Voice Recognition &amp; Live Bench Camera</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 20px; font-weight: 800;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="secVoiceSubtitle">
+                 <property name="text">
+                  <string>Hands-free voice dictation using Whisper speech recognition and optical bench microscope live feeds.</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 13.5px; color: #8ca394;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s6Step1">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s6Step1Layout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s6Step1Badge">
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string>background: rgba(0, 255, 133, 0.15); border: 1.5px solid #00FF85; border-radius: 14px; font-size: 13px; font-weight: 800; color: #00FF85;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s6Step1TextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s6Step1Title">
+                      <property name="text">
+                       <string>Whisper Voice Dictation with Animated Waveform</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 14.5px; font-weight: 700;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s6Step1Text">
+                      <property name="text">
+                       <string>Press the microphone button to dictate questions. The real-time animated waveform monitors audio amplitude, and automatic silence detection detects pauses to transcribe immediately.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s6Step2">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s6Step2Layout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s6Step2Badge">
+                    <property name="text">
+                     <string>2</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string>background: rgba(0, 255, 133, 0.15); border: 1.5px solid #00FF85; border-radius: 14px; font-size: 13px; font-weight: 800; color: #00FF85;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s6Step2TextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s6Step2Title">
+                      <property name="text">
+                       <string>USB Microscope &amp; Optical Bench Camera Support</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 14.5px; font-weight: 700;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s6Step2Text">
+                      <property name="text">
+                       <string>Select your USB microscope or external webcam from the camera device dropdown. Use freeze-frame mode to align micro-components before capturing high-resolution photos.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s6Tip">
+                 <property name="role" stdset="0">
+                  <string notr="true">calloutTip</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s6TipLayout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s6TipIcon">
+                    <property name="pixmap">
+                     <pixmap>icons/zap__00FF85__20.svg</pixmap>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s6TipTextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s6TipTitle">
+                      <property name="text">
+                       <string>Hands-Free Bench Tip</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13.5px; font-weight: 700; color: #00FF85;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s6TipText">
+                      <property name="text">
+                       <string>When holding multimeter probes or hot soldering irons, use the voice dictation shortcut to ask pinout and voltage drop questions without having to touch your mouse or keyboard.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="secExport">
+              <layout class="QVBoxLayout" name="secExportLayout">
+               <property name="spacing">
+                <number>14</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="secExportTitle">
+                 <property name="text">
+                  <string>7. Exporting Diagnostic Reports &amp; Transcripts</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 20px; font-weight: 800;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="secExportSubtitle">
+                 <property name="text">
+                  <string>Generate engineering reports, bench notes, and documentation in PDF, Markdown, and Plain Text.</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 13.5px; color: #8ca394;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s7Step1">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s7Step1Layout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s7Step1Badge">
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string>background: rgba(0, 255, 133, 0.15); border: 1.5px solid #00FF85; border-radius: 14px; font-size: 13px; font-weight: 800; color: #00FF85;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s7Step1TextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s7Step1Title">
+                      <property name="text">
+                       <string>Export Answer (Single Response)</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 14.5px; font-weight: 700;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s7Step1Text">
+                      <property name="text">
+                       <string>Click the 'Export' icon beneath any individual AI answer to export that specific pinout reference, formula derivation, or diagnostic procedure.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s7Step2">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s7Step2Layout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s7Step2Badge">
+                    <property name="text">
+                     <string>2</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>28</width>
+                      <height>28</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string>background: rgba(0, 255, 133, 0.15); border: 1.5px solid #00FF85; border-radius: 14px; font-size: 13px; font-weight: 800; color: #00FF85;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s7Step2TextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s7Step2Title">
+                      <property name="text">
+                       <string>Export Full Chat Session</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 14.5px; font-weight: 700;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s7Step2Text">
+                      <property name="text">
+                       <string>Use the 'Export Chat' button in the chat header to export the entire multi-turn thread with timestamps, user prompts, and cited datasheet references.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s7Code">
+                 <property name="role" stdset="0">
+                  <string notr="true">codeSnippet</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="s7CodeLayout">
+                  <property name="spacing">
+                   <number>6</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>10</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>12</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="s7CodeHint">
+                    <property name="text">
+                     <string>SUPPORTED FORMATS</string>
+                    </property>
+                    <property name="styleSheet">
+                     <string>font-size: 11px; font-weight: 700; color: #8ca394;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="s7CodeCode">
+                    <property name="text">
+                     <string># Export Report Formats:
+• PDF (.pdf): Formatted printable bench document with headers &amp; syntax blocks
+• Markdown (.md): Structured markdown document formatted for GitHub &amp; Obsidian
+• Plain Text (.txt): Lightweight clean ASCII notes for terminal logs</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string>font-family: 'Consolas', 'Courier New', monospace; font-size: 12.5px; color: #67e8f9;</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="secSafety">
+              <layout class="QVBoxLayout" name="secSafetyLayout">
+               <property name="spacing">
+                <number>14</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="secSafetyTitle">
+                 <property name="text">
+                  <string>8. Electronics Workbench Safety &amp; Standards</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 20px; font-weight: 800;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="secSafetySubtitle">
+                 <property name="text">
+                  <string>Vital rules for IC pin 1 orientation, polarity standards, electrostatic discharge (ESD), and live testing.</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 13.5px; color: #8ca394;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s8RulesCard">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="s8RulesCardLayout">
+                  <property name="spacing">
+                   <number>10</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>18</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>18</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>16</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="s8RulesCardTitle">
+                    <property name="text">
+                     <string>Universal Component Orientation Rules</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string>font-size: 15px; font-weight: 700; color: #00FF85;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="s8RulesCardText">
+                    <property name="text">
+                     <string>1. IC Pin 1 Orientation: When the U-notch points UP, Pin 1 is the top-left pin. When marked with an embossed circular dot, Pin 1 is the pin directly adjacent to the dot. Pin numbering proceeds counter-clockwise around the package.
+
+2. Diode Polarity: Rectifier and signal diodes feature an embossed silver, white, or black band marking the CATHODE (-) terminal. Current flows from Anode (+) to Cathode (-).
+
+3. Electrolytic Capacitor Polarity: The printed stripe with minus signs (---) indicates the NEGATIVE lead. On new through-hole capacitors, the negative lead is also physically shorter. NEVER connect in reverse polarity!
+
+4. Multimeter Resistance &amp; Continuity: ALWAYS disconnect power and discharge all capacitors before probing resistance. Testing an energized circuit can blow the multimeter fuse or damage sensitive semiconductors.</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string>font-size: 13px;</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s8Caution">
+                 <property name="role" stdset="0">
+                  <string notr="true">calloutCaution</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s8CautionLayout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s8CautionIcon">
+                    <property name="pixmap">
+                     <pixmap>icons/alert-octagon__f87171__20.svg</pixmap>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s8CautionTextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s8CautionTitle">
+                      <property name="text">
+                       <string>High-Voltage Energy Hazards (SMPS Capacitors)</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13.5px; font-weight: 700; color: #f87171;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s8CautionText">
+                      <property name="text">
+                       <string>Primary filter capacitors in switched-mode power supplies (SMPS) and motor drives can retain lethal DC voltages (300V-400V+) long after mains power is unplugged. Always measure voltage across capacitor terminals with a meter before touching.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="s8Warning">
+                 <property name="role" stdset="0">
+                  <string notr="true">calloutWarning</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="s8WarningLayout" stretch="0,1">
+                  <property name="spacing">
+                   <number>14</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>14</number>
+                  </property>
+                  <item alignment="Qt::AlignTop">
+                   <widget class="QLabel" name="s8WarningIcon">
+                    <property name="pixmap">
+                     <pixmap>icons/alert-triangle__fbbf24__20.svg</pixmap>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="s8WarningTextColumn">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="s8WarningTitle">
+                      <property name="text">
+                       <string>ESD Protection for CMOS &amp; Microcontrollers</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13.5px; font-weight: 700; color: #fbbf24;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="s8WarningText">
+                      <property name="text">
+                       <string>Integrated circuits containing MOSFETs, CMOS gates, or microcontrollers can be permanently damaged by sub-perceptual static discharge (sub-100V). Use an ESD wrist strap and grounded bench mat.</string>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="styleSheet">
+                       <string>font-size: 13px;</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="secFaq">
+              <layout class="QVBoxLayout" name="secFaqLayout">
+               <property name="spacing">
+                <number>14</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="secFaqTitle">
+                 <property name="text">
+                  <string>9. Troubleshooting &amp; Diagnostics FAQ</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 20px; font-weight: 800;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="secFaqSubtitle">
+                 <property name="text">
+                  <string>Quick solutions for common connection, camera, OCR, and model loading issues.</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string>font-size: 13.5px; color: #8ca394;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="faq1">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="faq1Layout">
+                  <property name="spacing">
+                   <number>4</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>12</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>12</number>
+                  </property>
+                  <item>
+                   <widget class="QPushButton" name="faq1Question">
+                    <property name="text">
+                     <string>Q: The Ollama status pill in the sidebar shows red / 'Offline'?</string>
+                    </property>
+                    <property name="role" stdset="0">
+                     <string notr="true">faqQuestion</string>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string>text-align: left; background: transparent; border: none; font-size: 14px; font-weight: 600; padding: 0;</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>icons/chevron-down__00FF85.svg<normaloff>icons/chevron-down__00FF85.svg</normaloff>
+                     </iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>14</width>
+                      <height>14</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="faq1Answer">
+                    <property name="text">
+                     <string>A: Ensure the Ollama service is running in a terminal by executing 'ollama serve'. Check that port 11434 is accessible and not blocked by local firewalls. Verify the host address in Settings.</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="role" stdset="0">
+                     <string notr="true">faqAnswer</string>
+                    </property>
+                    <property name="styleSheet">
+                     <string>font-size: 12.5px; color: #8ca394; padding-top: 4px;</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="faq2">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="faq2Layout">
+                  <property name="spacing">
+                   <number>4</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>12</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>12</number>
+                  </property>
+                  <item>
+                   <widget class="QPushButton" name="faq2Question">
+                    <property name="text">
+                     <string>Q: Camera says 'Device Busy' or will not open?</string>
+                    </property>
+                    <property name="role" stdset="0">
+                     <string notr="true">faqQuestion</string>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string>text-align: left; background: transparent; border: none; font-size: 14px; font-weight: 600; padding: 0;</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>icons/chevron-down__00FF85.svg<normaloff>icons/chevron-down__00FF85.svg</normaloff>
+                     </iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>14</width>
+                      <height>14</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="faq2Answer">
+                    <property name="text">
+                     <string>A: Make sure other applications (such as Windows Camera, Zoom, Teams, or OBS) are not currently using the webcam. Open Settings to select a different camera index (0, 1, or 2).</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="role" stdset="0">
+                     <string notr="true">faqAnswer</string>
+                    </property>
+                    <property name="styleSheet">
+                     <string>font-size: 12.5px; color: #8ca394; padding-top: 4px;</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="faq3">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="faq3Layout">
+                  <property name="spacing">
+                   <number>4</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>12</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>12</number>
+                  </property>
+                  <item>
+                   <widget class="QPushButton" name="faq3Question">
+                    <property name="text">
+                     <string>Q: OCR does not recognize laser markings on black IC packages?</string>
+                    </property>
+                    <property name="role" stdset="0">
+                     <string notr="true">faqQuestion</string>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string>text-align: left; background: transparent; border: none; font-size: 14px; font-weight: 600; padding: 0;</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>icons/chevron-down__00FF85.svg<normaloff>icons/chevron-down__00FF85.svg</normaloff>
+                     </iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>14</width>
+                      <height>14</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="faq3Answer">
+                    <property name="text">
+                     <string>A: Adjust the angle of your bench light. Faint laser etchings reflect light best when illuminated from an oblique 45-degree angle. You can also use the Zoom Lightbox to crop and examine the image.</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="role" stdset="0">
+                     <string notr="true">faqAnswer</string>
+                    </property>
+                    <property name="styleSheet">
+                     <string>font-size: 12.5px; color: #8ca394; padding-top: 4px;</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="faq4">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="faq4Layout">
+                  <property name="spacing">
+                   <number>4</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>12</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>12</number>
+                  </property>
+                  <item>
+                   <widget class="QPushButton" name="faq4Question">
+                    <property name="text">
+                     <string>Q: Whisper voice dictation returns empty text?</string>
+                    </property>
+                    <property name="role" stdset="0">
+                     <string notr="true">faqQuestion</string>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string>text-align: left; background: transparent; border: none; font-size: 14px; font-weight: 600; padding: 0;</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>icons/chevron-down__00FF85.svg<normaloff>icons/chevron-down__00FF85.svg</normaloff>
+                     </iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>14</width>
+                      <height>14</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="faq4Answer">
+                    <property name="text">
+                     <string>A: Verify that your microphone is set as the Windows default recording device. Ensure speaking clearly at normal conversation volume within 0.5 to 1 meter of the microphone.</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="role" stdset="0">
+                     <string notr="true">faqAnswer</string>
+                    </property>
+                    <property name="styleSheet">
+                     <string>font-size: 12.5px; color: #8ca394; padding-top: 4px;</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="faq5">
+                 <property name="role" stdset="0">
+                  <string notr="true">card</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="faq5Layout">
+                  <property name="spacing">
+                   <number>4</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>12</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>16</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>12</number>
+                  </property>
+                  <item>
+                   <widget class="QPushButton" name="faq5Question">
+                    <property name="text">
+                     <string>Q: How do I re-index all manuals or clear vector cache?</string>
+                    </property>
+                    <property name="role" stdset="0">
+                     <string notr="true">faqQuestion</string>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string>text-align: left; background: transparent; border: none; font-size: 14px; font-weight: 600; padding: 0;</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>icons/chevron-down__00FF85.svg<normaloff>icons/chevron-down__00FF85.svg</normaloff>
+                     </iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>14</width>
+                      <height>14</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="faq5Answer">
+                    <property name="text">
+                     <string>A: Open the Hardware PDF Hub and click 'Re-index All'. This regenerates text embeddings and visual vector indexes for all uploaded PDF manuals.</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="role" stdset="0">
+                     <string notr="true">faqAnswer</string>
+                    </property>
+                    <property name="styleSheet">
+                     <string>font-size: 12.5px; color: #8ca394; padding-top: 4px;</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="docSpacerR">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources />
+ <connections />
+</ui>

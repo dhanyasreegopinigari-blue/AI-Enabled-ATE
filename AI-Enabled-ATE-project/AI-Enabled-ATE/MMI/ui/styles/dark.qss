@@ -1,0 +1,646 @@
+/* =====================================================================
+   DARK THEME
+   Taken from the original project (ui/view.py -> DARK_STYLE) and adapted:
+
+   1. "Class#objectName" selectors were converted to Class[role="name"].
+      Reason: objectName must be UNIQUE per widget in Qt Designer, but many
+      widgets share one look. So every widget has
+          objectName -> unique, describes WHAT it is   (e.g. btnUploadImage)
+          role/kind  -> shared, describes HOW it looks (e.g. kind="primary")
+   2. The four "quick action" cards are QFrame (not QPushButton) because
+      Qt Designer cannot put labels inside a QPushButton.
+   ===================================================================== */
+
+
+QWidget { background:#080d0a; color:#f3fbf5; font-family:'Segoe UI','Inter',system-ui,sans-serif; font-size:14px; }
+QLabel { background:transparent; }
+QPushButton {
+    background: #111a14;
+    border: 1px solid rgba(0, 255, 133, 0.16);
+    border-radius: 11px;
+    padding: 8px 16px;
+    min-height: 22px;
+    color: #e6edf6;
+    font-weight: 500;
+}
+QPushButton:hover {
+    background: #18281d;
+    border-color: #00FF85;
+}
+QPushButton:pressed {
+    background: #0d1510;
+}
+QPushButton:disabled {
+    color: #526357;
+    background: #0d120f;
+    border-color: #1a241e;
+}
+
+QPushButton[kind="primary"] {
+    background: #00FF85;
+    border: 1px solid #00FF85;
+    border-radius: 11px;
+    color: #060907;
+    font-weight: 700;
+    padding: 8px 18px;
+}
+QPushButton[kind="primary"]:hover {
+    background: #39FF14;
+    border-color: #39FF14;
+}
+QPushButton[kind="primary"]:pressed {
+    background: #00cc6a;
+}
+QPushButton[kind="primary"]:disabled {
+    background: #142419;
+    color: #4a6352;
+    border-color: #1b3022;
+}
+
+QPushButton[kind="secondary"] {
+    background: #101712;
+    border: 1px solid rgba(0, 255, 133, 0.18);
+    border-radius: 11px;
+    color: #cbd5e1;
+    font-weight: 500;
+}
+QPushButton[kind="secondary"]:hover {
+    background: #16221a;
+    color: #f3fbf5;
+    border-color: rgba(0, 255, 133, 0.35);
+}
+
+QPushButton[kind="danger"] {
+    background: #250f12;
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    border-radius: 11px;
+    color: #fca5a5;
+    font-weight: 500;
+}
+QPushButton[kind="danger"]:hover {
+    background: #3b161b;
+    border-color: #ef4444;
+    color: #fecaca;
+}
+
+QPushButton[kind="nav"] {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 7px 14px;
+    color: #8ca394;
+    font-weight: 600;
+    font-size: 13.5px;
+}
+QPushButton[kind="nav"]:hover {
+    background: #121c16;
+    color: #f3fbf5;
+    border-color: rgba(0, 255, 133, 0.15);
+}
+QPushButton[kind="navActive"] {
+    background: rgba(0, 255, 133, 0.14);
+    border: 1px solid rgba(0, 255, 133, 0.32);
+    border-radius: 10px;
+    padding: 7px 14px;
+    color: #00FF85;
+    font-weight: 700;
+    font-size: 13.5px;
+}
+
+QPushButton[kind="chip"] {
+    background: #0f1612;
+    border: 1px solid rgba(0, 255, 133, 0.16);
+    border-radius: 16px;
+    padding: 6px 14px;
+    color: #8ca394;
+    font-size: 12.5px;
+    font-weight: 500;
+}
+QPushButton[kind="chip"]:hover {
+    background: #152219;
+    color: #f3fbf5;
+    border-color: rgba(0, 255, 133, 0.35);
+}
+QPushButton[kind="chipActive"] {
+    background: rgba(0, 255, 133, 0.16);
+    border: 1px solid #00FF85;
+    border-radius: 16px;
+    padding: 6px 14px;
+    color: #00FF85;
+    font-size: 12.5px;
+    font-weight: 600;
+}
+
+QPushButton[kind="cardAction"] {
+    text-align: left;
+    border-radius: 16px;
+    background: #0e1612;
+    border: 1px solid rgba(0, 255, 133, 0.14);
+    padding: 16px;
+}
+QPushButton[kind="cardAction"]:hover {
+    border-color: #00FF85;
+    background: #121c16;
+}
+
+QLineEdit, QComboBox, QSpinBox {
+    background: #0b110e;
+    border: 1px solid rgba(0, 255, 133, 0.18);
+    border-radius: 11px;
+    padding: 9px 12px;
+    color: #f3fbf5;
+    selection-background-color: rgba(0, 255, 133, 0.3);
+}
+QLineEdit:focus, QComboBox:focus, QSpinBox:focus {
+    border: 1px solid #00FF85;
+    background: #0e1713;
+}
+QComboBox QAbstractItemView {
+    background: #0e1612;
+    border: 1px solid rgba(0, 255, 133, 0.2);
+    selection-background-color: rgba(0, 255, 133, 0.2);
+    selection-color: #00FF85;
+}
+
+QListWidget {
+    background: #0b110e;
+    border: 1px solid rgba(0, 255, 133, 0.14);
+    border-radius: 14px;
+    padding: 6px;
+    outline: 0;
+}
+QListWidget::item {
+    padding: 10px 12px;
+    border-radius: 9px;
+    margin-bottom: 4px;
+    border: 1px solid transparent;
+}
+QListWidget::item:hover {
+    background: #131e17;
+    border-color: rgba(0, 255, 133, 0.12);
+}
+QListWidget::item:selected {
+    background: rgba(0, 255, 133, 0.15);
+    color: #00FF85;
+    border-color: rgba(0, 255, 133, 0.3);
+}
+
+QFrame[role="card"] {
+    background: #0e1612;
+    border: 1px solid rgba(0, 255, 133, 0.14);
+    border-radius: 18px;
+}
+QFrame[role="accentCard"] {
+    background: #0f1c14;
+    border: 1px solid rgba(0, 255, 133, 0.28);
+    border-radius: 18px;
+}
+QFrame[role="tipCard"] {
+    background: #0e1612;
+    border: 1px solid rgba(0, 255, 133, 0.14);
+    border-radius: 16px;
+    padding: 12px;
+}
+QFrame[role="tipCard"]:hover {
+    border-color: #00FF85;
+    background: #131e17;
+}
+QFrame[role="sidebarFrame"] {
+    background: #0a0f0c;
+    border-right: 1px solid rgba(0, 255, 133, 0.14);
+}
+
+QFrame[role="userBubble"] {
+    background: #122419;
+    border: 1px solid rgba(0, 255, 133, 0.25);
+    border-radius: 16px;
+}
+QFrame[role="asstCard"] {
+    background: #0e1612;
+    border: 1px solid rgba(0, 255, 133, 0.14);
+    border-radius: 18px;
+}
+
+/* Chat Sidebar Items */
+QFrame[role="chatItem"] {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    padding: 2px 4px;
+}
+QFrame[role="chatItem"]:hover {
+    background: #121c16;
+    border-color: rgba(0, 255, 133, 0.15);
+}
+QFrame[role="chatItem"][active="true"] {
+    background: rgba(0, 255, 133, 0.12);
+    border: 1px solid rgba(0, 255, 133, 0.28);
+}
+QLabel[role="chatItemTitle"] {
+    font-size: 13px;
+    font-weight: 600;
+    color: #f3fbf5;
+}
+QFrame[role="chatItem"][active="true"] QLabel[role="chatItemTitle"] {
+    color: #00FF85;
+}
+
+/* Manuals Page & Viewer Styling */
+QFrame[role="dropZone"] {
+    background: #090e0b;
+    border: 2px dashed rgba(0, 255, 133, 0.35);
+    border-radius: 18px;
+}
+QFrame[role="dropZone"]:hover {
+    background: #0f1712;
+    border-color: #00FF85;
+}
+QFrame[role="manualCard"] {
+    background: #0e1612;
+    border: 1px solid rgba(0, 255, 133, 0.14);
+    border-radius: 18px;
+}
+QFrame[role="manualCard"]:hover {
+    background: #121c16;
+    border-color: #00FF85;
+}
+QFrame[role="manualRow"] {
+    background: #0d1410;
+    border: 1px solid rgba(0, 255, 133, 0.12);
+    border-radius: 12px;
+    padding: 8px 14px;
+}
+QFrame[role="manualRow"]:hover {
+    background: #121c16;
+    border-color: #00FF85;
+}
+QFrame[role="statCard"] {
+    background: #0b110e;
+    border: 1px solid rgba(0, 255, 133, 0.15);
+    border-radius: 16px;
+    padding: 14px 18px;
+}
+QCheckBox[role="toggleChat"] {
+    color: #8ca394;
+    font-size: 12px;
+    spacing: 6px;
+}
+QCheckBox[role="toggleChat"]::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 255, 133, 0.3);
+    background: #090e0b;
+}
+QCheckBox[role="toggleChat"]::indicator:checked {
+    background: #00FF85;
+    border-color: #00FF85;
+}
+
+/* Component Library Cards & Pills */
+QFrame[role="compCard"] {
+    background: #0e1612;
+    border: 1px solid rgba(0, 255, 133, 0.14);
+    border-radius: 18px;
+}
+QFrame[role="compCard"]:hover {
+    background: #121c16;
+    border: 1px solid #00FF85;
+}
+QFrame[role="imgPanel"] {
+    background: #070c09;
+    border: 1px solid rgba(0, 255, 133, 0.08);
+    border-radius: 14px;
+}
+QPushButton[kind="catPill"] {
+    background: #0e1511;
+    border: 1px solid rgba(0, 255, 133, 0.16);
+    border-radius: 15px;
+    padding: 6px 14px;
+    color: #8ca394;
+    font-size: 13px;
+    font-weight: 500;
+}
+QPushButton[kind="catPill"]:hover {
+    background: #142018;
+    color: #f3fbf5;
+    border-color: rgba(0, 255, 133, 0.4);
+}
+QPushButton[kind="catPillActive"] {
+    background: #00FF85;
+    border: 1px solid #00FF85;
+    border-radius: 15px;
+    padding: 6px 14px;
+    color: #060907;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+QFrame[role="typingCard"] {
+    background: #0d1510;
+    border: 1px dashed rgba(0, 255, 133, 0.35);
+    border-radius: 14px;
+}
+
+QLabel[role="brand"] { font-size:18px; font-weight:800; color:#f3fbf5; letter-spacing:0.5px; }
+QLabel[role="title"] { font-size:26px; font-weight:800; color:#f3fbf5; letter-spacing:0.5px; }
+QLabel[role="h1"] { font-size:20px; font-weight:700; color:#f3fbf5; }
+QLabel[role="h2"] { font-size:16px; font-weight:600; color:#e6edf6; }
+QLabel[role="subtitle"] { font-size:14px; color:#8ca394; }
+QLabel[role="muted"] { color:#7a9684; font-size:13px; }
+QLabel[role="caption"] { color:#64806e; font-size:12px; }
+QLabel[role="badge"] {
+    background: rgba(0, 255, 133, 0.10);
+    border: 1px solid rgba(0, 255, 133, 0.22);
+    border-radius: 8px;
+    padding: 3px 8px;
+    color: #00FF85;
+    font-size: 11.5px;
+    font-weight: 600;
+}
+QLabel[role="badgeOk"] {
+    background: rgba(0, 255, 133, 0.14);
+    border: 1px solid #00FF85;
+    border-radius: 8px;
+    padding: 3px 8px;
+    color: #00FF85;
+    font-size: 11.5px;
+    font-weight: 600;
+}
+QLabel[role="badgeWarn"] {
+    background: rgba(245, 158, 11, 0.14);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    border-radius: 8px;
+    padding: 3px 8px;
+    color: #FBBF24;
+    font-size: 11.5px;
+    font-weight: 600;
+}
+QLabel[role="codeBlock"] {
+    background: #070b09;
+    border: 1px solid #18281d;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-family: 'Cascadia Code','Consolas','Courier New',monospace;
+    font-size: 12.5px;
+    color: #67e8f9;
+}
+
+QScrollBar:vertical { background:#080d0a; width:10px; margin:0; }
+QScrollBar::handle:vertical { background:#19271e; min-height:24px; border-radius:5px; margin:2px; }
+QScrollBar::handle:vertical:hover { background:#00FF85; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height:0; }
+QScrollBar:horizontal { background:#080d0a; height:10px; margin:0; }
+QScrollBar::handle:horizontal { background:#19271e; min-width:24px; border-radius:5px; margin:2px; }
+QScrollBar::handle:horizontal:hover { background:#00FF85; }
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal { width:0; }
+
+QProgressBar { background:#0d1510; border:1px solid rgba(0, 255, 133, 0.18); border-radius:6px; text-align:center; }
+QProgressBar::chunk { background:#00FF85; border-radius:5px; }
+QTreeWidget { background:#0b110e; border:1px solid rgba(0, 255, 133, 0.14); border-radius:12px; outline:0; color:#f3fbf5; }
+QTreeWidget::item { padding:6px; border-radius:6px; }
+QTreeWidget::item:hover { background:#131e17; }
+QTreeWidget::item:selected { background:rgba(0, 255, 133, 0.16); color:#00FF85; }
+QTabWidget::pane { border:1px solid rgba(0, 255, 133, 0.14); border-radius:14px; background:#0b110e; }
+QTabBar::tab {
+    background: #0f1712;
+    border: 1px solid rgba(0, 255, 133, 0.14);
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 8px 18px;
+    margin-right: 4px;
+    color: #8ca394;
+    font-weight: 600;
+}
+QTabBar::tab:selected { background:rgba(0, 255, 133, 0.16); color:#00FF85; border-color:#00FF85; }
+QTabBar::tab:hover:!selected { background:#131e17; color:#f3fbf5; }
+
+/* Quick Action Cards */
+QFrame[kind="qaCardPrimary"] {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #0f2819, stop:1 #081a10);
+    border: 1.5px solid #00FF85;
+    border-radius: 18px;
+    padding: 0px;
+    text-align: left;
+}
+QFrame[kind="qaCardPrimary"]:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #143621, stop:1 #0c2417);
+    border-color: #39FF14;
+}
+QFrame[kind="qaCardTeal"] {
+    background: #0a1314;
+    border: 1px solid rgba(20, 184, 166, 0.28);
+    border-radius: 18px;
+    padding: 0px;
+    text-align: left;
+}
+QFrame[kind="qaCardTeal"]:hover {
+    background: #0f1c1d;
+    border-color: #14B8A6;
+}
+QFrame[kind="qaCardMint"] {
+    background: #091410;
+    border: 1px solid rgba(16, 185, 129, 0.28);
+    border-radius: 18px;
+    padding: 0px;
+    text-align: left;
+}
+QFrame[kind="qaCardMint"]:hover {
+    background: #0e1e17;
+    border-color: #10B981;
+}
+QFrame[kind="qaCardLime"] {
+    background: #11150a;
+    border: 1px solid rgba(132, 204, 22, 0.28);
+    border-radius: 18px;
+    padding: 0px;
+    text-align: left;
+}
+QFrame[kind="qaCardLime"]:hover {
+    background: #19200f;
+    border-color: #84CC16;
+}
+QLabel[role="qaTitle"] { font-size: 15px; font-weight: 700; color: #f3fbf5; }
+QLabel[role="qaDesc"] { font-size: 12px; color: #8da394; }
+QFrame[kind="qaCardPrimary"] QLabel[role="qaTitle"] { color: #00FF85; }
+
+/* Sub-cards and Stat boxes */
+QFrame[role="subCard"] {
+    background: #0a0f0c;
+    border: 1px solid rgba(0, 255, 133, 0.12);
+    border-radius: 12px;
+}
+QFrame[role="subCard"]:hover {
+    background: #101712;
+    border-color: rgba(0, 255, 133, 0.28);
+}
+QLabel[role="subCardTitle"] { font-weight: 600; font-size: 13px; color: #f3fbf5; }
+QFrame[role="statBoxGreen"] {
+    background: rgba(0, 255, 133, 0.05);
+    border: 1px solid rgba(0, 255, 133, 0.16);
+    border-radius: 12px;
+}
+QFrame[role="statBoxTeal"] {
+    background: rgba(20, 184, 166, 0.05);
+    border: 1px solid rgba(20, 184, 166, 0.16);
+    border-radius: 12px;
+}
+QLabel[role="statGreenVal"] { font-size: 20px; font-weight: 700; color: #00FF85; }
+QLabel[role="statTealVal"] { font-size: 20px; font-weight: 700; color: #14B8A6; }
+
+/* Global Left Sidebar */
+QFrame[role="globalSidebar"] {
+    background: #090e0b;
+    border-right: 1px solid rgba(0, 255, 133, 0.14);
+}
+QPushButton[role="collapseBtn"] {
+    background: transparent;
+    border: 1px solid rgba(0, 255, 133, 0.16);
+    border-radius: 8px;
+    padding: 4px;
+}
+QPushButton[role="collapseBtn"]:hover {
+    background: #142018;
+    border-color: #00FF85;
+}
+QPushButton[kind="sidebarNav"] {
+    text-align: left;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 9px 12px;
+    color: #8ca394;
+    font-weight: 500;
+    font-size: 13.5px;
+}
+QPushButton[kind="sidebarNav"]:hover {
+    background: #121c16;
+    color: #f3fbf5;
+    border-color: rgba(0, 255, 133, 0.15);
+}
+QPushButton[kind="sidebarNavActive"] {
+    text-align: left;
+    background: rgba(0, 255, 133, 0.12);
+    border: 1px solid rgba(0, 255, 133, 0.28);
+    border-left: 3.5px solid #00FF85;
+    border-radius: 10px;
+    padding: 9px 12px;
+    color: #00FF85;
+    font-weight: 700;
+    font-size: 13.5px;
+}
+QPushButton[kind="sidebarNavCollapsed"] {
+    text-align: center;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 9px 0px;
+}
+QPushButton[kind="sidebarNavCollapsed"]:hover {
+    background: #121c16;
+    border-color: rgba(0, 255, 133, 0.15);
+}
+QPushButton[kind="sidebarNavCollapsedActive"] {
+    text-align: center;
+    background: rgba(0, 255, 133, 0.15);
+    border: 1px solid rgba(0, 255, 133, 0.35);
+    border-radius: 10px;
+    padding: 9px 0px;
+}
+
+/* Slim Content Header */
+QFrame[role="slimHeader"] {
+    background: #080d0a;
+    border-bottom: 1px solid rgba(0, 255, 133, 0.1);
+}
+
+/* User Manual Documentation & TOC */
+QFrame[role="tocCard"] {
+    background: #0b110e;
+    border: 1px solid rgba(0, 255, 133, 0.14);
+    border-radius: 16px;
+    padding: 10px;
+}
+QPushButton[kind="tocItem"] {
+    text-align: left;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 7px 10px;
+    color: #8ca394;
+    font-size: 13px;
+    font-weight: 500;
+}
+QPushButton[kind="tocItem"]:hover {
+    background: #131e17;
+    color: #f3fbf5;
+}
+QPushButton[kind="tocItemActive"] {
+    text-align: left;
+    background: rgba(0, 255, 133, 0.12);
+    border: 1px solid rgba(0, 255, 133, 0.28);
+    border-left: 3px solid #00FF85;
+    border-radius: 8px;
+    padding: 7px 10px;
+    color: #00FF85;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/* Callout Boxes */
+QFrame[role="calloutTip"] {
+    background: rgba(0, 255, 133, 0.06);
+    border-left: 4px solid #00FF85;
+    border-top: 1px solid rgba(0, 255, 133, 0.16);
+    border-right: 1px solid rgba(0, 255, 133, 0.16);
+    border-bottom: 1px solid rgba(0, 255, 133, 0.16);
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+QFrame[role="calloutNote"] {
+    background: rgba(56, 189, 248, 0.06);
+    border-left: 4px solid #38bdf8;
+    border-top: 1px solid rgba(56, 189, 248, 0.16);
+    border-right: 1px solid rgba(56, 189, 248, 0.16);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.16);
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+QFrame[role="calloutWarning"] {
+    background: rgba(251, 191, 36, 0.06);
+    border-left: 4px solid #fbbf24;
+    border-top: 1px solid rgba(251, 191, 36, 0.16);
+    border-right: 1px solid rgba(251, 191, 36, 0.16);
+    border-bottom: 1px solid rgba(251, 191, 36, 0.16);
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+QFrame[role="calloutCaution"] {
+    background: rgba(248, 113, 113, 0.06);
+    border-left: 4px solid #f87171;
+    border-top: 1px solid rgba(248, 113, 113, 0.16);
+    border-right: 1px solid rgba(248, 113, 113, 0.16);
+    border-bottom: 1px solid rgba(248, 113, 113, 0.16);
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+
+/* Code Snippet Box */
+QFrame[role="codeSnippet"] {
+    background: #050806;
+    border: 1px solid rgba(0, 255, 133, 0.18);
+    border-radius: 11px;
+    padding: 12px 14px;
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+
+
+
+/* ---- Extra rules added for the Designer version (not in the original) ---- */
+/* Suggested-question card on the AI Assistant page (was a QPushButton "secondary" with a label inside) */
+QFrame[role="questionCard"] {
+    background: #101712; border: 1px solid rgba(0, 255, 133, 0.18); border-radius: 11px;
+}
+QFrame[role="questionCard"]:hover { background: #16221a; border-color: rgba(0, 255, 133, 0.35); }
